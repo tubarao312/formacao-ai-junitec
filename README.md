@@ -155,8 +155,6 @@ O ideal nestas tarefas é reparti-las aos poucos, por isso seguir a seguinte ord
 1. Base de dados e camada de dados e types
 2. Endpoints
 3. Documentação
-4. Testes
-5. Correr a aplicação localmente.
 
 Vamos a isso:
 
@@ -186,10 +184,30 @@ You can create two files:
 - db.py
 ```
 
-3. Documentação
+3. Endpoints:
 
+Começamos por adicionar a dependência de FastAPI:
 
+```sh
+uv add fastapi[standard]
+```
 
+Depois, podemos usar uma prompt simples:
+
+```txt
+Create a FastAPI app in app.py that has a:
+- GET for getting all members
+- POST for kicking a random member
+- POST for reseting the members in the database
+```
+
+4. Agora podemos correr a aplicação localmente
+
+```sh
+uv run fastapi dev app
+```
+
+5. 
 
 ---
 
