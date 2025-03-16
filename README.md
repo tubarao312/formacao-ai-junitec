@@ -51,8 +51,7 @@ Guia para a formação de AI Dev Tooling para a JUNITEC
 > [!NOTE]
 > **Tarefa**: Landing page para a JUNITEC.
 > - Desenhar landing page básica
-> - Corrigir pequenos bugs em Next
-> - Dar deploy da aplicação em Vercel
+> - Correr localmente
 
 1. Vamos scrappar as imagens do site da JUNITEC para podermos dar ao V0 e ele
    as conseguir incluir no site:
