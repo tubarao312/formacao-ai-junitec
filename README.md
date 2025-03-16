@@ -50,10 +50,9 @@ Guia para a formação de AI Dev Tooling para a JUNITEC
 
 > [!NOTE]
 > **Tarefa**: Landing page para a JUNITEC.
-> - Desenhar landing page básica para a JUNITEC
+> - Desenhar landing page básica
 > - Corrigir pequenos bugs em Next
 > - Dar deploy da aplicação em Vercel
-
 
 ---
 
@@ -61,6 +60,13 @@ Guia para a formação de AI Dev Tooling para a JUNITEC
 
 > [!NOTE]
 > **Tarefa**: Backend para "gerir" membros da JUNITEC.
+> - Base de dados SQLite com uma tabela pré-populada de membros de consultoria 
+>   e inovação.
+> - Aplicação FastAPI com endpoints para dar reset à lista, promover membros de
+>   junirebento para membro oficial, e escolher membros ao calhas para fazer a 
+>   limpeza semanal da sede.
+> - Criar documentação automática com AI.
+> - Gerar uma pequena suite de testes para a aplicação.
 
 ---
 
