@@ -206,8 +206,6 @@ Create a FastAPI app in app.py that has a:
 uv run fastapi dev app
 ```
 
-5. 
-
 ---
 
 # O modelo mais poderoso de todos
