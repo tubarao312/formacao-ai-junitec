@@ -46,7 +46,7 @@ Guia para a formação de AI Dev Tooling para a JUNITEC
 > Vamos agora passar para a parte prática do guia executando duas tarefas com a
 > ferramenta apropriada para cada tarefa.
 
-# V0 + Next + Vercel
+# V0
 
 > [!NOTE]
 > **Tarefa**: Landing page para a JUNITEC.
@@ -54,7 +54,85 @@ Guia para a formação de AI Dev Tooling para a JUNITEC
 > - Corrigir pequenos bugs em Next
 > - Dar deploy da aplicação em Vercel
 
----
+1. Vamos scrappar as imagens do site da JUNITEC para podermos dar ao V0 e ele
+   as conseguir incluir no site:
+```sh
+wget -m -r -l1 -A jpg,jpeg,png https://junitec.pt/en/home-en/
+```
+
+2. Vamos pedir ao GPT4o para pesquisar sobre a JUNITEC online e criar um
+   resumo do que é a JUNITEC e dos seus maiores feitos recentes e antigos, 
+   quais são os seus departamentos, etc...
+
+```txt
+Search online for JUNITEC. I want to know:
+- A summary of what it is
+- Its history and biggest accomplishements
+- Some of the projects it has worked on
+```
+
+3. Com a resposta desta query, vamos pedir ao O1 para ler sobre a JUNITEC e 
+   criar uma prompt adequada para alimentarmos ao V0 e criar uma boa landing
+   page.
+
+   O resultado final da minha query acabou por ser o seguinte:
+
+```txt
+Create a modern landing page for JUNITEC, the Junior Enterprise of Instituto Superior Técnico, focusing on their innovative tech solutions and notable achievements. Include the following sections:
+
+1. Hero Section:
+   - Engaging headline introducing JUNITEC as IST’s Junior Enterprise since 1990
+   - Brief text highlighting its mission to deliver value-driven technological solutions
+   - Prominent call-to-action button to learn more about services or start a project
+
+2. About Section:
+   - Short overview of JUNITEC’s history and impact
+   - Emphasize the “Most Impactful Project” award in Europe
+   - Mention its commitment to providing real-world experience to IST students
+   - Potential team or group photo (optional)
+
+3. Projects/Portfolio Section:
+   - Showcase the key consulting projects, each with a title, brief description, and an accompanying image or icon:
+     • Oficina dos Sons (fun e-learning for kids with reading/writing challenges)
+     • Unbabel 3.0 (brain pattern analysis for communication)
+     • Intranet for Nova Junior Consulting
+     • Brain Auto Manager (BCI + Machine Learning for safer mobility)
+     • Mobility Support Platform (collaboration with Thales on European transport)
+     • Collector 1.0 (system to manage 50k+ art pieces)
+     • Product Management Software (smart vending machine software)
+   - Each project card should have a “Learn More” or “View Details” link
+
+4. Awards/Recognitions Section:
+   - Highlight the “Most Impactful Project” award
+   - Possibly include a timeline or a quick showcase of any other accolades
+
+5. Values & Approach Section (optional):
+   - Illustrate JUNITEC’s focus on quality, innovation, and collaboration
+   - Mention how they ensure specialized services and partner success
+
+6. Contact/Call-to-Action Section:
+   - Encourage visitors to reach out for collaboration or more information
+   - Contact form or button to schedule a meeting
+   - Display relevant social media links (LinkedIn, etc.)
+
+Overall Style & Tone:
+- Clean, modern design
+- Professional yet approachable voice
+- Use concise language, visually appealing layouts, and clear calls to action
+
+End Goal:
+A one-page website that highlights JUNITEC’s history, expertise, major accomplishments, and invites visitors to engage or learn more.
+
+Make sure it uses blue, white, and dark blue colors. I'm also giving you some images already included in the current junitec.com website so that you can include them in the landing page. 
+```
+
+4. O site está pronto! Se quiserem correr localmente, podem usar a minha tentativa de
+   prática guardada em `/webapp` usando o seguinte comando:
+
+```sh
+yarn install
+yarn dev
+```
 
 # Cursor
 
@@ -67,6 +145,51 @@ Guia para a formação de AI Dev Tooling para a JUNITEC
 >   limpeza semanal da sede.
 > - Criar documentação automática com AI.
 > - Gerar uma pequena suite de testes para a aplicação.
+
+Para construir um backend e código no geral, a melhor ferramenta é Cursor ou 
+GitHub co-pilot. Neste caso, vamos mais uma vez pedir uma prompt ao GPT4o,
+alimentá-la ao O1, e depois alimentar a prompt do O1 ao Cursor Agent para
+ele nos poder ajudar a construir a nossa app.
+
+O ideal nestas tarefas é reparti-las aos poucos, por isso seguir a seguinte ordem:
+1. Base de dados e camada de dados e types
+2. Endpoints
+3. Documentação
+4. Testes
+5. Correr a aplicação localmente.
+
+Vamos a isso:
+
+1. Setup de projeto. Recomendo usarem UV:
+
+```sh
+uv init
+uv add fastapi
+```
+
+2. Base de dados e camada de dados e types:
+
+```txt
+In /backend, I want to start by creating an SQLite database. I want you to base yourself on the table in @membros.csv and:
+- Have a pydantic type that represents a single members with a (first name, second name, department). You will use this in db.py
+- Have the following functions in db.py:
+    - create_schema - Creates the table if it doesn't already exist.
+    - populate_database - opens @members.csv and populates the db.
+    - get_all_members
+    - kick_random_member (returning the member)
+- Make sure the connection is global and init only once.
+- The primary key should be first_name, second_name
+- DO NOT USE SQLALCHEMY, just the Sqlite3 extension. Keep it simple!
+
+You can create two files:
+- models.py
+- db.py
+```
+
+3. Documentação
+
+
+
 
 ---
 
