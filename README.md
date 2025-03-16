@@ -46,11 +46,10 @@ Guia para a formação de AI Dev Tooling para a JUNITEC
 > Vamos agora passar para a parte prática do guia executando duas tarefas com a
 > ferramenta apropriada para cada tarefa.
 
----
-
 # V0
 
-> **Tarefa**: Landing page para a JUNITEC
+> [!NOTE]
+> **Tarefa**: Landing page para a JUNITEC.
 
 # V0.dev
 
@@ -70,7 +69,8 @@ I'm trying to make a website for it using v0.dev. I need a good prompt that incl
 
 # Cursor
 
-> **Tarefa**: Backend para "gerir" membros da JUNITEC
+> [!NOTE]
+> **Tarefa**: Backend para "gerir" membros da JUNITEC.
 
 
 
