@@ -42,28 +42,18 @@ Guia para a formação de AI Dev Tooling para a JUNITEC
 
 ---
 
-> [!NOTE]
+> [!TIP]
 > Vamos agora passar para a parte prática do guia executando duas tarefas com a
 > ferramenta apropriada para cada tarefa.
 
-# V0
+# V0 + Next + Vercel
 
 > [!NOTE]
 > **Tarefa**: Landing page para a JUNITEC.
+> - Desenhar landing page básica para a JUNITEC
+> - Corrigir pequenos bugs em Next
+> - Dar deploy da aplicação em Vercel
 
-# V0.dev
-
-
-
-Para modelar aplicações e webapps, podemos usar uma técnica chamada **prompt chaining**.
-
-Vamos começar por pedir ao **GPT4o que nos crie uma boa prompt para alimentarmos ao O1**:
-
-```
-This is my Junior Enterprise: https://junitec.pt/en/home-en/
-
-I'm trying to make a website for it using v0.dev. I need a good prompt that includes the ideas in this website and its general vibe, but I want to modernize it and have something more in the style of https://stripe.com/en-pt with bluer tones. Help me create a prompt for it. You don't need to specify the tech stack as v0.dev is opinionated about that.
-```
 
 ---
 
@@ -71,8 +61,6 @@ I'm trying to make a website for it using v0.dev. I need a good prompt that incl
 
 > [!NOTE]
 > **Tarefa**: Backend para "gerir" membros da JUNITEC.
-
-
 
 ---
 
