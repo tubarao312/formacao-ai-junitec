@@ -2,7 +2,7 @@
 Guia para a formação de AI Dev Tooling para a JUNITEC
 
 # Motivação
-- **Importância para non-technical people** - podem executar os vossos projetos facilmente sem estarem dependentes dos nerds de informática como eu. Podem iterar mais rapidamente e não estão presos aos nerds de informática (como eu)
+- **Importância para non-technical people** - podem executar os vossos projetos facilmente sem estarem dependentes dos nerds de informática (eu).
 - **Importância para programadores** - podem ser 10x programmers e executar tarefas numa escala que era anteriormente impossível sem levantar mundos e fundos.
 
 ---
